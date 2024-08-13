@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/background_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--Primary_Background-->
+        <ImageView
+            android:id="@+id/primary_background"
+            android:layout_width="match_parent"
+            android:layout_height="605dp"
+            android:background="@drawable/back4"
+            android:backgroundTint="#B90A0B24"
+            android:backgroundTintMode="src_over"
+            android:contentDescription="@string/primary_background" />
+        <!--Secondary_Background-->
+        <ImageView
+            android:id="@+id/secondary_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#141642"
+            android:backgroundTint="#B90A0B1F"
+            android:backgroundTintMode="src_over"
+            android:contentDescription="@string/secondary_background"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tablayout"
+        android:contentDescription="@string/frame_layout" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gradient3"
+        app:tabIndicatorColor="@color/ic_launcher_background"
+        android:contentDescription="@string/tab" />
+
+
+</RelativeLayout>

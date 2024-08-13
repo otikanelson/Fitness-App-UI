@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/survey_back"
+    android:backgroundTint="#B90A0B24"
+    android:backgroundTintMode="src_over"
+    android:padding="15dp"
+    tools:context=".Final_q">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:padding="16dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="@color/Notifications"
+            android:fontFamily="@font/oswald"
+            android:text="@string/is_there_any_additional_feedback_or_comments_you_would_like_to_provide_regarding_your_exercise_preferences"/>
+
+     <EditText
+        android:id="@+id/et_height"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+         android:layout_marginTop="40dp"
+         android:inputType="numberDecimal"
+         android:textColor="@color/Notifications"
+         android:fontFamily="@font/oswald"
+        android:hint="@string/more_about_your_fitness"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/Notifications"
+            android:textSize="20sp"
+            android:fontFamily="@font/oswald"
+            android:text="@string/thank_you_for_completing_the_survey"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/done"
+            app:cornerRadius="20dp"/>
+    </LinearLayout>
+</FrameLayout>

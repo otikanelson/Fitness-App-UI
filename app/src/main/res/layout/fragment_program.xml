@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Programs_layout"
+    tools:context=".ProgramFragment">
+
+        <!--Background-->
+        <ImageView
+            android:id="@+id/primary_background"
+            android:layout_width="match_parent"
+            android:layout_height="3500sp"
+            android:background="@drawable/back4"
+            android:backgroundTint="#B90A0B24"
+            android:backgroundTintMode="src_over"
+            android:contentDescription="@string/back1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:layout_marginBottom="10dp"
+            android:padding="10sp">
+
+    <TextView
+        android:id="@+id/Descr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/oswald"
+        android:text="@string/training_section"
+        android:textColor="@color/new_color"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+            <RelativeLayout
+            android:id="@+id/layout"
+            android:layout_below="@+id/Descr"
+            android:layout_width="450dp"
+            android:layout_height="320dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/gradient4"
+            android:padding="15sp">
+
+
+                <ImageButton
+                    android:id="@+id/start_btn"
+                    android:layout_width="198dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="10sp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/gradient"
+                    android:contentDescription="@string/survey"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/img_back" />
+
+                <TextView
+                    android:layout_width="119dp"
+                    android:layout_height="48sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignBottom="@+id/start_btn"
+                    android:fontFamily="@font/rajdhani"
+                    android:gravity="center"
+                    android:text="@string/start"
+                    android:textColor="#080314"
+                    android:textSize="22sp" />
+
+
+<!--chest-->
+        <RelativeLayout
+            android:id="@+id/beginner_layout"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:src="@drawable/gradient6"
+                android:background="@drawable/illus_begin"
+                android:contentDescription="@string/_1" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:fontFamily="@font/oswald"
+                android:text="@string/chest"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+<!--shoulder_back-->
+        <RelativeLayout
+            android:id="@+id/back_layout"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient6"
+                android:contentDescription="@string/begginer" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="35dp"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/illus_inter"
+                android:contentDescription="@string/_1" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                android:fontFamily="@font/oswald"
+                android:text="@string/arm"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald"
+                android:layout_marginTop="45dp"
+                android:layout_marginStart="15sp"
+                android:text="@string/back_"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+<!--Six_pack-->
+        <RelativeLayout
+            android:id="@+id/arm_layout"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="15sp"
+            android:layout_below="@+id/beginner_layout"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:src="@drawable/illus_advanced"
+                android:background="@drawable/gradient6"
+                android:contentDescription="@string/_1" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:fontFamily="@font/oswald"
+                android:text="@string/six_pack"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+<!--Legs-->
+        <RelativeLayout
+                android:id="@+id/leg_layout"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="15sp"
+                android:layout_below="@+id/beginner_layout"
+                android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/gradient6"
+                android:src="@drawable/illus_legs"
+                android:contentDescription="@string/_1" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20sp"
+                    android:fontFamily="@font/oswald"
+                    android:text="@string/leg"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout"
+                android:layout_marginTop="20sp">
+
+                <TextView
+                    android:id="@+id/Recomemded_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recomended_programs"
+                    android:textColor="@color/new_color"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/oswald"/>
+
+                <RelativeLayout
+                    android:id="@+id/Full_body_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Recomemded_txt"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageButton
+                        android:id="@+id/Full_body_btn"
+                        android:layout_width="800dp"
+                        android:layout_height="190sp"
+                        android:layout_marginTop="30sp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/body_back"
+                        android:contentDescription="@string/begginer" />
+
+                    <ImageView
+                        android:layout_width="172dp"
+                        android:layout_height="220dp"
+                        android:layout_alignEnd="@+id/Full_body_btn"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/full_body"
+                        android:contentDescription="@string/_1" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50sp"
+                        android:layout_marginStart="10sp"
+                        android:layout_alignStart="@+id/Full_body_btn"
+                        android:fontFamily="@font/oswald"
+                        android:text="@string/full_txt"
+                        android:textColor="@color/Black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/Lower_body_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Full_body_layout"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageButton
+                        android:id="@+id/Lower_body_btn"
+                        android:layout_width="800dp"
+                        android:layout_height="190sp"
+                        android:layout_marginTop="30sp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/body_back"
+                        android:contentDescription="@string/begginer" />
+
+                    <ImageView
+                        android:layout_width="190dp"
+                        android:layout_height="218dp"
+                        android:layout_alignEnd="@+id/Lower_body_btn"
+                        android:background="@drawable/lower_body"
+                        android:contentDescription="@string/_1" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginTop="50sp"
+                        android:layout_alignStart="@+id/Lower_body_btn"
+                        android:fontFamily="@font/oswald"
+                        android:text="@string/lower_txt"
+                        android:textColor="@color/Black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

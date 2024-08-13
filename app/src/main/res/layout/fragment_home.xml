@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".HomeFragment">
+
+<!--background_layout-->
+<LinearLayout
+    android:id="@+id/background_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<!--Primary_Background-->
+    <ImageView
+        android:id="@+id/primary_background"
+        android:layout_width="match_parent"
+        android:layout_height="605dp"
+        android:background="@drawable/back4"
+        android:backgroundTint="#B90A0B24"
+        android:backgroundTintMode="src_over"
+        android:contentDescription="@string/primary_background" />
+<!--Secondary_Background-->
+    <ImageView
+        android:id="@+id/secondary_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#141642"
+        android:backgroundTint="#B90A0B1F"
+        android:backgroundTintMode="src_over"
+        android:contentDescription="@string/secondary_background"/>
+</LinearLayout>
+
+    <ScrollView
+        android:id="@+id/home_page_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="5sp"
+        android:paddingRight="5sp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5sp"
+            android:paddingRight="5sp"
+            android:orientation="horizontal">
+
+<!--Settings_Button-->
+            <ImageButton
+                android:id="@+id/settings_btn"
+                android:layout_width="48sp"
+                android:layout_height="48sp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="20sp"
+                android:padding="5sp"
+                android:background="@drawable/menu_button"
+                android:clickable="true"
+                android:contentDescription="@string/settings"
+                android:focusable="true"
+                android:src="@drawable/baseline_menu_24" />
+
+<!--notification_Button-->
+            <ImageButton
+                android:id="@+id/not_btn"
+                android:layout_width="48sp"
+                android:layout_height="48sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="20sp"
+                android:padding="5sp"
+                android:background="@drawable/menu_button"
+                android:clickable="true"
+                android:contentDescription="@string/notification"
+                android:focusable="true"
+                android:src="@drawable/baseline_notifications_24" />
+
+<!--Intro-->
+            <RelativeLayout
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9sp"
+                android:layout_marginTop="90sp">
+
+                <TextView
+                    android:id="@+id/title_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="5sp"
+                    android:fontFamily="@font/oswald"
+                    android:text="@string/Freb_Fit"
+                    android:textColor="#DAFFFFFF"
+                    android:textSize="42sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/program_btn1"
+                    android:layout_width="183dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/title_text"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="2sp"
+                    android:background="@drawable/gradient2"
+                    android:contentDescription="@string/start_program"
+                    android:src="@drawable/imagebuttons"
+                    tools:ignore="layout_height"/>
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="35sp"
+                    android:gravity="center"
+                    android:layout_alignStart="@+id/program_btn1"
+                    android:layout_alignTop="@+id/program_btn1"
+                    android:fontFamily="@font/oswald"
+                    android:text="@string/Begin"
+                    android:textColor="#AE121111"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/descr"
+                    android:layout_width="match_parent"
+                    android:layout_height="140sp"
+                    android:layout_below="@+id/program_btn1"
+                    android:layout_margin="5sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="@font/oswald"
+                    android:text="@string/Intro"
+                    android:textColor="#DAFFFFFF"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+<!--Recommended_Programs-->
+    <TextView
+        android:id="@+id/recommended_programs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10sp"
+        android:fontFamily="@font/oswald"
+        android:text="@string/programs"
+        android:textColor="#DAFFFFFF"
+        android:textSize="35sp"
+        android:textStyle="bold"/>
+
+<!--Sessions-->
+    <HorizontalScrollView
+        android:id="@+id/home_horizontal_scrollView"
+        android:layout_width="870sp"
+        android:layout_height="165dp"
+        android:layout_below="@+id/recommended_programs"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/Programs_layout"
+            android:layout_width="870sp"
+            android:layout_height="169sp">
+
+            <!--session1-->
+            <RelativeLayout
+                android:id="@+id/session_layout1"
+                android:layout_width="125dp"
+                android:layout_height="150sp"
+                android:layout_marginStart="9sp">
+
+                <ImageButton
+                    android:id="@+id/Session1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/button_back"
+                    android:background="@drawable/setting_bkgrnd"
+                    android:backgroundTint="#CB010112"
+                    android:backgroundTintMode="src_over"
+                    android:contentDescription="@string/session_01" />
+
+                <ImageView
+                    android:id="@+id/session_image1"
+                    android:layout_width="120dp"
+                    android:layout_height="67dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="5sp"
+                    android:background="@drawable/sport"
+                    android:backgroundTint="#43303F9F"
+                    android:backgroundTintMode="src_over"
+                    android:contentDescription="@string/session_01" />
+
+                <TextView
+                    android:id="@+id/session1_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/session_image1"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/oswald"
+                    android:text="@string/session_01"
+                    android:textColor="#DAFFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/session1_text"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/oswald"
+                    android:text="@string/_50mins_session"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <!--session2-->
+            <RelativeLayout
+                android:id="@+id/session_layout2"
+                android:layout_width="125dp"
+                android:layout_height="150sp"
+                android:layout_marginStart="10sp"
+                android:layout_toEndOf="@+id/session_layout1">
+
+                <ImageButton
+                    android:id="@+id/Session2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/button_back"
+                    android:background="@drawable/setting_bkgrnd"
+                    android:backgroundTint="#CB010112"
+                    android:backgroundTintMode="src_over"
+                    android:contentDescription="@string/session_02" />
+
+                <ImageView
+                    android:id="@+id/session_image2"
+                    android:layout_width="120dp"
+                    android:layout_height="67dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="5sp"
+                    android:background="@drawable/sport2"
+                    android:backgroundTint="#43303F9F"
+                    android:backgroundTintMode="src_over"
+                    android:contentDescription="@string/session_02" />
+
+                <TextView
+                    android:id="@+id/session2_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@+id/session_image2"
+                    android:fontFamily="@font/oswald"
+                    android:text="@string/session_02"
+                    android:textColor="#DAFFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@+id/session2_text"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/oswald"
+                    android:text="@string/_30mins_session"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <!--session3-->
+            <RelativeLayout
+                android:id="@+id/session_layout3"
+                android:layout_width="125dp"
+                android:layout_height="150sp"
+                android:layout_marginStart="10sp"
+                android:layout_toEndOf="@+id/session_layout2">
+
+                <ImageButton
+                    android:id="@+id/Session3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/button_back"
+                    android:background="@drawable/setting_bkgrnd"
+                    android:backgroundTint="#CB010112"
+                    android:backgroundTintMode="src_over"
+                    android:contentDescription="@string/session_03" />
+
+                <ImageView
+                    android:id="@+id/session_image3"
+                    android:layout_width="120dp"
+                    android:layout_height="67dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="5sp"
+                    android:background="@drawable/sport3"
+                    android:backgroundTint="#43303F9F"
+                    android:backgroundTintMode="src_over"
+                    android:contentDescription="@string/session_03" />
+
+                <TextView
+                    android:id="@+id/session3_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@id/session_image3"
+                    android:fontFamily="@font/oswald"
+                    android:text="@string/session_03"
+                    android:textColor="#DAFFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@id/session3_text"
+                    android:fontFamily="@font/oswald"
+                    android:text="@string/_45mins_session"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <!--session4-->
+            <RelativeLayout
+                android:id="@+id/session_layout4"
+                android:layout_width="125dp"
+                android:layout_height="150sp"
+                android:layout_marginStart="10sp"
+                android:layout_toEndOf="@+id/session_layout3">
+
+                <ImageButton
+                    android:id="@+id/Session4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/button_back"
+                    android:background="@drawable/setting_bkgrnd"
+                    android:backgroundTint="#CB010112"
+                    android:backgroundTintMode="src_over"
+                    android:contentDescription="@string/session_03" />
+
+                <ImageView
+                    android:id="@+id/session_image4"
+                    android:layout_width="120dp"
+                    android:layout_height="67dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="5sp"
+                    android:background="@drawable/sport4"
+                    android:backgroundTint="#43303F9F"
+                    android:backgroundTintMode="src_over"
+                    android:contentDescription="@string/session_04" />
+
+                <TextView
+                    android:id="@+id/session4_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@+id/session_image4"
+                    android:fontFamily="@font/oswald"
+                    android:text="@string/session_04"
+                    android:textColor="#DAFFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="69dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@+id/session4_text"
+                    android:fontFamily="@font/oswald"
+                    android:text="@string/_45mins_session"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <!--session5-->
+            <RelativeLayout
+                android:id="@+id/session_layout5"
+                android:layout_width="125dp"
+                android:layout_height="150sp"
+                android:layout_marginStart="10sp"
+                android:layout_toEndOf="@+id/session_layout4">
+
+                <ImageButton
+                    android:id="@+id/Session5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/button_back"
+                    android:background="@drawable/setting_bkgrnd"
+                    android:backgroundTint="#CB010112"
+                    android:backgroundTintMode="src_over"
+                    android:contentDescription="@string/session_05"/>
+
+                <ImageView
+                    android:id="@+id/session_image5"
+                    android:layout_width="120dp"
+                    android:layout_height="67dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="5sp"
+                    android:background="@drawable/sport5"
+                    android:backgroundTint="#43303F9F"
+                    android:backgroundTintMode="src_over"
+                    android:importantForAccessibility="no"
+                    android:contentDescription="@string/session_05" />
+
+                <TextView
+                    android:id="@+id/session5_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@+id/session_image5"
+                    android:fontFamily="@font/oswald"
+                    android:text="@string/session_05"
+                    android:textColor="#DAFFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="69dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@+id/session5_text"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/oswald"
+                    android:text="@string/_35mins_session"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <!--session6-->
+            <RelativeLayout
+                android:id="@+id/session_layout6"
+                android:layout_width="125dp"
+                android:layout_height="150sp"
+                android:layout_marginStart="10sp"
+                android:layout_toEndOf="@+id/session_layout5">
+
+                <ImageButton
+                    android:id="@+id/Session6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/button_back"
+                    android:background="@drawable/setting_bkgrnd"
+                    android:backgroundTint="#CB010112"
+                    android:backgroundTintMode="src_over"
+                    android:importantForAccessibility="no"
+                    android:contentDescription="@+id/session_06" />
+
+                <ImageView
+                    android:id="@+id/session_image6"
+                    android:layout_width="120dp"
+                    android:layout_height="67dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="5sp"
+                    android:background="@drawable/sport6"
+                    android:backgroundTint="#43303F9F"
+                    android:backgroundTintMode="src_over"
+                    android:importantForAccessibility="no"
+                    android:contentDescription="@+id/Image6" />
+
+                <TextView
+                    android:id="@+id/session6_text"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@id/session_image6"
+                    android:fontFamily="@font/oswald"
+                    android:text="@string/session_06"
+                    android:textColor="#DAFFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@+id/session6_text"
+                    android:fontFamily="@font/oswald"
+                    android:textColor="@color/white"
+                    android:text="@string/_45mins_session"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <!--session7-->
+            <RelativeLayout
+                android:id="@+id/session_layout7"
+                android:layout_width="125dp"
+                android:layout_height="150sp"
+                android:layout_marginStart="10sp"
+                android:layout_toEndOf="@+id/session_layout6">
+
+                <ImageButton
+                    android:id="@+id/Session7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/button_back"
+                    android:background="@drawable/setting_bkgrnd"
+                    android:backgroundTint="#CB010112"
+                    android:backgroundTintMode="src_over"
+                    android:importantForAccessibility="no"
+                    android:contentDescription="@+id/session_07" />
+
+                <ImageView
+                    android:id="@+id/session_image7"
+                    android:layout_width="120dp"
+                    android:layout_height="67dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="5sp"
+                    android:background="@drawable/sport7"
+                    android:backgroundTint="#43303F9F"
+                    android:backgroundTintMode="src_over"
+                    android:importantForAccessibility="no"
+                    android:contentDescription="@string/image7" />
+
+                <TextView
+                    android:id="@+id/session7_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@+id/session_image7"
+                    android:fontFamily="@font/oswald"
+                    android:text="@string/session_07"
+                    android:textColor="#DAFFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@+id/session7_text"
+                    android:fontFamily="@font/oswald"
+                    android:textColor="@color/white"
+                    android:text="@string/_40mins_session"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+<!--Check_Activity-->
+    <RelativeLayout
+        android:id="@+id/Check_Activity"
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:padding="5sp"
+        android:layout_below="@+id/home_horizontal_scrollView"
+        android:background="#00000000"
+        android:layout_margin="5sp">
+
+        <ImageButton
+            android:id="@+id/Activity_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_back"
+            android:background="@drawable/activity2"
+            android:backgroundTintMode="src_over"
+            android:contentDescription="@string/check_your_activity" />
+
+
+        <TextView
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="115sp"
+            android:fontFamily="@font/oswald"
+            android:text="@string/check_your_activity"
+            android:textColor="#CCCBCB"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="155sp"
+            android:fontFamily="@font/oswald"
+            android:text="@string/decr1"
+            android:textColor="#817B7B"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+<!--Get_Instructor-->
+    <RelativeLayout
+                android:id="@+id/find_instructors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Check_Activity"
+                android:layout_margin="5sp"
+                android:background="#00000000"
+                android:padding="5sp">
+
+                <ImageButton
+                    android:id="@+id/find_instructors_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/img_back"
+                    android:background="@drawable/find_instructors"
+                    android:contentDescription="@string/get_instructor" />
+
+                <TextView
+                    android:layout_width="300sp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="115sp"
+                    android:fontFamily="@font/oswald"
+                    android:text="@string/get_instructor"
+                    android:textColor="#CCCBCB"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="155sp"
+                    android:fontFamily="@font/oswald"
+                    android:text="@string/find_a_trainer"
+                    android:textColor="#6F6666"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+<!--music_player-->
+    <RelativeLayout
+                android:id="@+id/promo_layout"
+                android:layout_width="373dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/survey_layout"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10sp"
+                android:background="@drawable/gradient4"
+                android:orientation="vertical"
+                android:padding="5sp">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/img_back" />
+
+                <TextView
+                    android:id="@id/promo_text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/oswald"
+                    android:text="@string/freb_fit_music_player"
+                    android:textColor="#EBE8E8"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/promo_text2"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:fontFamily="@font/oswald"
+                    android:layout_below="@+id/promo_text1"
+                    android:text="@string/promo"
+                    android:textColor="#928F8F"
+                    android:textSize="20sp" />
+
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="135dp"
+                    android:layout_below="@+id/promo_text1"
+                    android:layout_toEndOf="@+id/promo_text2"
+                    android:background="@drawable/ffmusic_player"
+                    android:contentDescription="@string/music_feature" />
+
+            </RelativeLayout>
+
+<!--Survey-->
+    <RelativeLayout
+                android:id="@+id/survey_layout"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_below="@id/find_instructors"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10sp"
+                android:background="@drawable/gradient6"
+                android:orientation="vertical"
+                android:paddingLeft="20sp"
+                android:paddingRight="20sp">
+
+                <TextView
+                    android:id="@id/survey_text1"
+                    android:layout_width="358dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="10sp"
+                    android:fontFamily="@font/oswald"
+                    android:gravity="center"
+                    android:text="@string/take_a_survey"
+                    android:textColor="#EBE8E8"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="254dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/survey_text1"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="5sp"
+                    android:fontFamily="@font/oswald"
+                    android:gravity="center"
+                    android:text="@string/survey_desc"
+                    android:textColor="#928F8F"
+                    android:textSize="17sp" />
+
+                <ImageButton
+                    android:id="@+id/survey_btn"
+                    android:layout_width="198dp"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/textView1"
+                    android:layout_margin="10sp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/gradient"
+                    android:contentDescription="@string/survey"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/img_back" />
+
+                <TextView
+                    android:layout_width="119dp"
+                    android:layout_height="48sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignBottom="@+id/survey_btn"
+                    android:fontFamily="@font/rajdhani"
+                    android:gravity="center"
+                    android:text="@string/survey"
+                    android:textColor="#080314"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+
+
+

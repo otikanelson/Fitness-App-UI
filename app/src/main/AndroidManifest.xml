@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FrebFit"
+        tools:targetApi="31">
+        <activity
+            android:name=".beg_leg"
+            android:exported="false"
+            android:theme="@style/Theme.FrebFit.NoActionBar" />
+        <activity
+            android:name=".beg_back"
+            android:exported="false"
+            android:theme="@style/Theme.FrebFit.NoActionBar" />
+        <activity
+            android:name=".beg_abs"
+            android:exported="false"
+            android:theme="@style/Theme.FrebFit.NoActionBar" />
+        <activity
+            android:name=".beg_Arm"
+            android:exported="false"
+            android:theme="@style/Theme.FrebFit.NoActionBar"/>
+        <activity
+            android:name=".beg_chest"
+            android:exported="false"
+            android:theme="@style/Theme.FrebFit.NoActionBar" />
+        <activity
+            android:name=".edit_profile"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Settings" />
+        </activity>
+        <activity
+            android:name=".Survey"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".reset_password"
+            android:exported="false" />
+        <activity
+            android:name=".forgot_password"
+            android:exported="false" />
+        <activity
+            android:name=".WorkoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Startup"
+            android:exported="false" />
+        <activity
+            android:name=".program"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ProgramFragment" />
+        </activity>
+        <activity
+            android:name=".notifications"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".Settings"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".Signup"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+    </application>
+
+</manifest>

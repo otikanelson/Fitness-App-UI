@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/back4"
+    android:backgroundTint="#B90A0B24"
+    android:backgroundTintMode="src_over"
+    android:padding="20dp"
+    tools:context=".ActivityFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/calendar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        app:cardCornerRadius="25dp"
+        android:background="@color/White">
+
+        <CalendarView
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/height_layout"
+        android:layout_width="150dp"
+        android:layout_height="140dp"
+        android:layout_centerHorizontal="true"
+        android:padding="12dp"
+        android:layout_below="@id/calendar_layout"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="25dp"
+        android:background="@color/White">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
+
+    <TextView
+    android:id="@+id/text_height"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_margin="10sp"
+    android:text="Height: 0 cm"
+    android:textSize="18sp"
+    android:textStyle="bold" />
+
+    <NumberPicker
+        android:id="@+id/height_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_height"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+</RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/weight_layout"
+        android:layout_width="150dp"
+        android:layout_height="140dp"
+        android:layout_centerHorizontal="true"
+        android:padding="12dp"
+        android:layout_below="@id/height_layout"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="25dp"
+        android:background="@color/White">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/text_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:text="Weight: 0 kg"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <NumberPicker
+                android:id="@+id/weight_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_weight"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/text_bmi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weight_picker"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:text="BMI: 0"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

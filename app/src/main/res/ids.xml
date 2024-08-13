@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="logout_button" type="id" />
+    <item name="textViewLoginWithOptions" type="id" />
+    <item name="login_illus" type="id" />
+    <item name="login_btn" type="id" />
+    <item name="Login_txt" type="id" />
+    <item name="LoginWithOptions" type="id" />
+    <item name="Signup" type="id" />
+    <item name="card1" type="id" />
+    <item name="survey_text1" type="id" />
+    <item name="background_container" type="id"/>
+    <item name="primary_background" type="id"/>
+    <item name="secondary_background" type="id"/>
+    <item name="home_page_scrollview" type="id"/>
+    <item name="not_btn" type="id"/>
+    <item name="title" type="id"/>
+    <item name="title_text" type="id"/>
+    <item name="recommended_programs" type="id"/>
+    <item name="home_horizontal_scrollView" type="id"/>
+    <item name="Programs_layout" type="id"/>
+    <item name="session_layout1" type="id"/>
+    <item name="session_layout2" type="id"/>
+    <item name="session_layout3" type="id"/>
+    <item name="session_layout4" type="id"/>
+    <item name="session_layout5" type="id"/>
+    <item name="session_layout6" type="id"/>
+    <item name="session_layout7" type="id"/>
+    <item name="session_image1" type="id"/>
+    <item name="session_image2" type="id"/>
+    <item name="session_image3" type="id"/>
+    <item name="session_image4" type="id"/>
+    <item name="session_image5" type="id"/>
+    <item name="session_image6" type="id"/>
+    <item name="session_image7" type="id"/>
+    <item name="survey_layout" type="id" />
+    <item name="promo_text1" type="id" />
+    <item name="line" type="id">line</item>
+    <item name="Arm_layout" type="id" />
+    <item name="Arm_txt" type="id" />
+    <item name="beginner_Arm_layout" type="id" />
+    <item name="diff2_layout" type="id" />
+</resources>

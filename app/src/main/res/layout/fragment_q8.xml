@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/survey_back"
+    android:backgroundTint="#B90A0B24"
+    android:backgroundTintMode="src_over"
+    android:padding="10dp"
+    tools:context=".q8">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="28sp"
+                android:textColor="@color/Notifications"
+                android:fontFamily="@font/oswald"
+                android:text="@string/what_challenges_do_you_face_in_maintaining_a_consistent_fitness_routine" />
+
+            <EditText
+                android:id="@+id/detail"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:autofillHints=""
+                android:inputType="text"
+                android:textColor="#F04E4949"
+                android:fontFamily="@font/oswald"
+                android:hint="@string/specify_in_detail"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cornerRadius="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:text="@string/next"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            app:cornerRadius="30dp"
+            android:layout_alignParentBottom="true"
+            android:text="@string/back"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+</FrameLayout>

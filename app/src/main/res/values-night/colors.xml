@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#E41D1B1B</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="new_color2">#040837</color>
+
+    <color name="Primary">#1D023B</color>
+    <color name="Secondary">#013833</color>
+
+
+    <color name="Night_mode">#200147</color>
+    <color name="Notifications">#00292E</color>
+    <color name="Private_Account">#593B02</color>
+    <color name="Security">#6D0D15</color>
+    <color name="Back_8">#DC47032F</color>
+    <color name="Back_7">#270A33</color>
+    <color name="Black">#878387</color>
+    <color name="Back_Black">#A91D1C1C</color>
+    <color name="White">#232222</color>
+    <color name="notif_Black">#A3331133</color>
+</resources>
