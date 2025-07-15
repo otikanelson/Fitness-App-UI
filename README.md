@@ -50,7 +50,7 @@ To run the app locally:
 
 1. Clone the repository  
    ```bash
-   git clone https://github.com/yourusername/freb-fitness.git
+   git clone https://github.com/otikanelson/Fitness-App.git
 Open in Android Studio
 
 Let Gradle sync
